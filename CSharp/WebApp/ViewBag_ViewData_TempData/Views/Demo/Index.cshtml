@@ -1,0 +1,65 @@
+﻿@using ViewBag_ViewData_TempData.Models
+<h1>Demo Page</h1>
+@{
+    Combine cb = Model;
+}
+
+<h2>Emp Details</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+
+
+    @foreach (Emp emp in cb.MyEmp)
+    {
+        // <p>@emp.Id</p>
+        // <p>@emp.Name</p>
+        // <p>@emp.Address</p>
+        <tbody>
+
+            <tr>
+                <td>@emp.Id</td>
+                <td>@emp.Name</td>
+                <td>@emp.Address</td>
+            </tr>
+        </tbody>
+    }
+</table>
+
+
+
+<h2>Customer Details</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Cid</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>BillNo</th>
+        </tr>
+    </thead>
+
+
+    @foreach (Customer cust in cb.MyCustomer)
+    {
+        // <p>@emp.Id</p>
+        // <p>@emp.Name</p>
+        // <p>@emp.Address</p>
+        <tbody>
+
+            <tr>
+                <td>@cust.CId</td>
+                <td>@cust.Name</td>
+                <td>@cust.Address</td>
+                <td>@cust.BillNo</td>
+            </tr>
+        </tbody>
+    }
+</table>
+</table>
+

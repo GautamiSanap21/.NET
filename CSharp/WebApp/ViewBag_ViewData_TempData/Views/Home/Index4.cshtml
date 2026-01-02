@@ -1,0 +1,20 @@
+﻿@using ViewBag_ViewData_TempData.Models
+<h1>Index 4 View Page</h1>
+
+<p>
+
+    @{
+        //if you use the viedata/viewbag/tempdata to pass the DataObject you have to use ViewData["Emp"]
+        Emp emp = ViewData["Emp"] as Emp;
+
+        // and if you directly pass DataObject from the View Method you have to use Model
+        // Emp emp = Model;
+
+        <ul>
+        <li>@emp.Id</li>
+        <li>@emp.Name</li>
+        <li>@emp.Address</li>
+        </ul>
+
+    }
+</p>
